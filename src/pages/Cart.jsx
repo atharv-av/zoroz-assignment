@@ -15,7 +15,7 @@ const Cart = () => {
   }, [cart])
 
   return (
-    <div className='flex'>
+    <div className='flex pt-10'>
       <div className='mt-12 mx-7  flex justify-center items-center'>
         {
           cart.length !== 0 ?

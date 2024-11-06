@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 
 import FooterComponet from "./components/FooterComponet";
 import Payment from "./pages/Payment";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
         </Routes>
       </div>
       <div>

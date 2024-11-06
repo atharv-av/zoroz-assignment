@@ -7,7 +7,7 @@ const Navbar = () => {
   const cart=useSelector((state)=>state.cart);
   return (
     <div className=''>
-      <nav className='bg-slate-900 sm:flex sm:justify-between sm:items-center h-10 w-full rounded-md fixed top-0 z-10 '>
+      <nav className='bg-slate-900 sm:flex sm:justify-between sm:items-center h-16 w-full rounded-md fixed top-0 z-10 '>
         <NavLink to='/'>
           <div className='max-w-[95px] max-h-[65px] sm:ml-[100px] hidden sm:inline-flex'>
             <img src='https://fbcd.co/images/products/71a0cf367add375691cb38e3b9603d56_resize.png' alt='Not found'
