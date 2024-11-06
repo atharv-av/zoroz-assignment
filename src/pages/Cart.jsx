@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import CartItem from '../components/CartItem';
 import EmptyCart from '../components/EmptyCart';
+import { useNavigate } from 'react-router-dom';
 
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const [totalAmount, setTotalAmount] = useState(0);
+  const navigation = useNavigate()
 
   useEffect(() => {
     setTotalAmount(cart.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0));
@@ -41,7 +43,9 @@ const Cart = () => {
                   <div className='mt-6'>
                     <p className='flex justify-between text-gray-500 text-md mx-3 font-semibold'>Total <span className='font-bold text-green-600'>${Math.floor(totalAmount)}</span></p>
                   </div>
-                  <button className='bg-green-600 text-black text-md text-center font-semibold m-3 rounded-md '>Checkout</button>
+                  <button onClick={() => {
+                    navigation("/payment")
+                  }} className='bg-green-600 text-black text-md text-center font-semibold m-3 rounded-md '>Checkout</button>
                 </div>
                 <footer className='bg-slate-100 flex justify-between items-center md:hidden w-full rounded-md mx-3 my-3'>
                   
