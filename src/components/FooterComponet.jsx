@@ -50,7 +50,7 @@ function FooterComponet() {
         </div>
         <FooterDivider />
         <div className="w-full sm:flex sm:items-center sm:justify-between my-2 mx-2">
-          <FooterCopyright href="#" by="Kuldeepkushwah™" year={2024} />
+          <FooterCopyright href="#" by="Atharv Vibhute" year={2024} />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center mx-3">
             <FooterIcon href="#" icon={BsFacebook} />
             <FooterIcon href="#" icon={BsInstagram} />
